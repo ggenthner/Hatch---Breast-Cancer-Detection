@@ -145,7 +145,7 @@ def main():
     st.markdown(
         """
         <div class="footer">
-            <p>⚠️ This tool is for educational purposes only and should not be used as a substitute for professional medical diagnosis.</p>
+            <p> This tool should not be used as a substitute for professional medical diagnosis.</p>
         </div>
         """,
         unsafe_allow_html=True
