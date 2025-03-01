@@ -120,7 +120,7 @@ display(HTML('''
 
     <main>
         <h2>Breast Cancer Mammogram Analysis</h2>
-        <p>Upload a mammogram image to analyze for potential breast cancer indicators.</p>
+        <p>Please upload a mammogram image to analyze for potential breast cancer indicators.</p>
 
         <input type="file" id="mammogramInput" accept="image/*">
         <button onclick="analyzeMammogram()">Analyze</button>
@@ -141,6 +141,9 @@ display(HTML('''
                 resultDiv.innerHTML = "Please upload a mammogram image.";
                 return;
             }
+
+            rf = Roboflow(api_key="5tUPtX9wA9JoY7OuiQeN")
+            project = rf.workspace("hatch-cell-struture").project("my-first-project-epj8p-sjzvo/2")
 
             const API_KEY = "5tUPtX9wA9JoY7OuiQeN";
             const ENDPOINT = "https://classify.roboflow.com/my-first-project-epj8p-sjzvo/1";
