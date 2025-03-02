@@ -1,91 +1,237 @@
 /* Main styles */
 .stApp {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Logo styling */
+[data-testid="column"]:first-child {
+    background-color: white;
+    padding: 0;
+    margin-top: -1rem;
+}
+
+[data-testid="column"]:first-child img {
+    background: white;
+    padding: 0;
 }
 
 /* Title styling */
 h1 {
-    color: #2c3e50;
-    font-weight: 700;
+    color: #1a365d;
+    font-weight: 800;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    color: #2d3748;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+h3 {
+    color: #4a5568;
+    font-weight: 600;
+}
+
+/* Centered content container */
+.centered-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* File uploader styling */
+.uploadedFile {
+    border: 2px dashed #cbd5e0;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f7fafc;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Center Streamlit upload components */
+.css-1v0mbdj.etr89bj1 {
+    text-align: center;
+    width: 100%;
+}
+
+/* Modify upload text position */
+.css-1v0mbdj > label {
+    justify-content: center;
+    text-align: center;
+    order: 2;  /* Move filename below drag & drop */
+    margin-top: 10px;
+}
+
+/* Center drag and drop */
+div[data-testid="stFileUploader"] {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Result box styling */
 .result-box {
     background-color: #ffffff;
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 20px;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 25px;
     margin: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.result-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .result-text {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 800;
     text-align: center;
-    margin: 15px 0;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .confidence {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* File uploader styling */
-.uploadedFile {
-    border: 2px dashed #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
+    color: #4a5568;
+    margin-top: 15px;
+    font-weight: 500;
 }
 
 /* Button styling */
 .stButton > button {
     width: 100%;
-    border-radius: 5px;
-    background-color: #0066cc;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #2563eb, #3b82f6);
     color: white;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 12px 24px;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 }
 
 .stButton > button:hover {
-    background-color: #0052a3;
-}
-
-/* Footer styling */
-.footer {
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 5px;
+    background: linear-gradient(45deg, #1d4ed8, #2563eb);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
 }
 
 /* Info boxes styling */
 .stAlert {
-    border-radius: 5px;
-    margin: 10px 0;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 1rem;
+    border-left-width: 4px;
+}
+
+/* Success message styling */
+.element-container:has(.stSuccess) {
+    background-color: #f0fff4;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #9ae6b4;
+}
+
+/* Error message styling */
+.element-container:has(.stError) {
+    background-color: #fff5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #feb2b2;
 }
 
 /* Spinner styling */
 .stSpinner {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
+}
+
+/* Image container styling */
+.stImage {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    max-width: 800px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .result-text {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
-    
+
     .confidence {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .centered-content {
+        padding: 0 10px;
+    }
+}
+
+.app-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.switch-label {
+    color: #1a365d;
+    font-size: 0.9rem;
+}
+
+.css-1d391kg {  /* Sidebar class */
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 2rem 1rem;
+}
+
+.css-1d391kg .stMarkdown {
+    margin-bottom: 1.5rem;
 }
