@@ -1,7 +1,7 @@
 [project]
 name = "repl-nix-workspace"
 version = "0.1.0"
-description = "Add your description here"
+description = "Verification tool for Radiologists that helps them determine if a tumor is benign or malignant"
 requires-python = ">=3.11"
 dependencies = [
     "roboflow>=1.1.54",
